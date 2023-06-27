@@ -10,15 +10,13 @@ class Player {
     protected string $nametag;
     /** @var string */
     private string $displayName;
-
+    /** @var string */
+    private string $IpAddress;
     /** @var Gamemode */
     protected Gamemode $gamemode;
-
-    // ?
     /** @var string */
     protected string $xuid;
-
-    // No way yet to get uuid
+    /** @var string */
     protected $uuid;
 
     /**
@@ -28,8 +26,23 @@ class Player {
         $this->name = $name;
         $this->displayName = $name;
         $this->nametag = $name;
+        $this->IpAddress = $IpAddress;
     }
 
+    /**
+    * @return string
+    */
+    public function getIpAddress(): string {
+        return $this->IpAddress;
+    }
+
+    /**
+    * @return void
+    */
+    public function setAddress(string $address): string {
+        $this->IpAddress = $address;
+    }
+    
     /**
      * @return string
      */
